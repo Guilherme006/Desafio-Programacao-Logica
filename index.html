@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transformações Lógicas</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Transformações Lógicas — Prenex CNF/DNF, Forma Cláusal &amp; Horn</h1>
+    <p>Digite uma fórmula em LaTeX abaixo e clique em <strong>renderizar fórmula</strong> para ver sua Pré-visualização (\( \forall,\exists,\neg,\land,\lor,\to,\leftrightarrow \)).</p>
+    <p>Para ver a transformação em Forma Normal Conjuntiva Prenex, Fórmula Normal Disjuntiva Prenex, Forma Cláusal e Cláusula de Horn, clique no botão <strong>Transformar (passo a passo)</strong>.</p>
+  </header>
+
+  <div class="wrap">
+    <div class="grid">
+      <section class="panel">
+        <label for="latex" class="muted">Fórmula em LaTeX</label>
+        <textarea id="latex" spellcheck="false" placeholder="Ex.: 
+\forall x \exists y \big( P(x,y) \to Q(y) \big) \land \neg R(x)"></textarea>
+        <div class="btns">
+          <button id="btnRender" class="primary">Renderizar fórmula</button>
+          <button id="btnRun">Transformar (passo a passo)</button>
+          <button id="btnClear" title="Limpar">Limpar</button>
+        </div>
+      </section>
+      <section class="panel">
+        <h2>Pré-visualização</h2>
+        <div id="preview" class="preview mono"></div>
+      </section>
+    </div>
+
+    <section class="panel">
+      <h2>Passo a passo</h2>
+      <div class="steps" id="steps"></div>
+    </section>
+
+    <footer>
+      <div>&copy 2025, Guilherme Felippe Lazari.</div>
+    </footer>
+  </div>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
